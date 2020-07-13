@@ -54,6 +54,12 @@ class Home extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[CameraTab(), ChatTab(), StatusTab(), CallsTab()],
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.chat),
+          elevation: 1.0,
+          backgroundColor: primaryColor,
+        ),
       ),
     );
   }

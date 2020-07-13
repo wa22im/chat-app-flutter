@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:whatsApp_clone_flutter/src/screens/chat/ChatScreen.dart';
 import '../../../models/chat_item_model.dart';
 
 class ChatTab extends StatelessWidget {
-  List<ChatItem> chatList = new List<ChatItem>();
+  final List<ChatItem> chatList = new List<ChatItem>();
 
   ChatTab({Key key}) {
     for (int i = 0; i < 10; i++) {
@@ -29,7 +30,16 @@ class ChatTab extends StatelessWidget {
                 backgroundColor: Colors.grey,
                 backgroundImage: NetworkImage(chatList[index].profileURL),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                      person: chatList[index],
+                    ),
+                  ),
+                );
+              },
             );
           },
           separatorBuilder: (context, index) {

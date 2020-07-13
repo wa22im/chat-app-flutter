@@ -3,7 +3,7 @@ import 'package:whatsApp_clone_flutter/config/config.dart';
 import '../../../models/chat_item_model.dart';
 
 class CallsTab extends StatelessWidget {
-  List<ChatItem> chatList = new List<ChatItem>();
+  final List<ChatItem> chatList = new List<ChatItem>();
   CallsTab({Key key}) {
     for (int i = 0; i < 10; i++) {
       ChatItem chi = new ChatItem(
