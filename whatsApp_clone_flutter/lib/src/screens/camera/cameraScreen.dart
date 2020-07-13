@@ -6,9 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
 
-import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:camera/camera.dart';
 import 'package:whatsApp_clone_flutter/config/config.dart';
 
 class CameraExampleHome extends StatefulWidget {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsApp_clone_flutter/config/config.dart';
 import 'package:whatsApp_clone_flutter/src/screens/storyview/storyview.dart';
 
 final String imageUrl =
@@ -27,9 +26,15 @@ class StatusTab extends StatelessWidget {
             backgroundImage: NetworkImage(imageUrl),
             child: Container(
               alignment: Alignment.bottomRight,
-              child: Icon(
-                Icons.add,
-                color: Colors.green,
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green[200],
+                ),
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsApp_clone_flutter/config/config.dart';
 import 'package:whatsApp_clone_flutter/src/models/chat_item_model.dart';
 import 'package:whatsApp_clone_flutter/src/models/chat_message_model.dart';
+import 'package:whatsApp_clone_flutter/src/screens/calls/call.dart';
 
 class ChatScreen extends StatelessWidget {
   final ChatItem person;
@@ -23,7 +24,14 @@ class ChatScreen extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.call),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CallScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),

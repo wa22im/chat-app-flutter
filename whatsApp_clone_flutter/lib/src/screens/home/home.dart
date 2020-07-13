@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsApp_clone_flutter/config/config.dart';
+import 'package:whatsApp_clone_flutter/src/screens/calls/receiving_call.dart';
 import 'package:whatsApp_clone_flutter/src/screens/home/tabs/callsTab.dart';
 import 'package:whatsApp_clone_flutter/src/screens/home/tabs/cameraTab.dart';
 import 'package:whatsApp_clone_flutter/src/screens/home/tabs/chatTab.dart';
@@ -30,7 +31,14 @@ class Home extends StatelessWidget {
             ),
             IconButton(
               icon: Icon(Icons.more_vert),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ReceivingCall(),
+                  ),
+                );
+              },
             )
           ],
           bottom: TabBar(
